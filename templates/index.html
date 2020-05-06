@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+
+</head>
+<body>
+    <div class = "login">
+        <h1>Predict Iris Plant type</h1>
+
+        <!--Main Input for Receiving Query to ML model -->
+        <form action = "{{ url_for('predict')}}" method="post">
+            <input type="text" name="sepal length in cm", placeholder="sepal length in cm", required="required" />
+            <input type="text" name="sepal width in cm", placeholder="sepal width in cm", required="required" />
+            <input type="text" name="petal length in cm", placeholder="petal length in cm", required="required" />
+            <input type="text" name="petal width in cm", placeholder="petal width in cm", required="required" />
+
+            <button type="submit" class="btn-btn-primary btn-block btn-large">Predict</button>
+
+        </form>
+
+        <br>
+        <br>
+        {{ prediction_text }}
+
+    </div>
+
+</body>
+</html>
